@@ -25,10 +25,36 @@ import androidx.compose.material3.*
 import androidx.compose.ui.draw.clip
 
 
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
+
+import androidx.core.view.WindowCompat
+import androidx.activity.ComponentActivity
+import androidx.compose.ui.graphics.toArgb
+
+import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.platform.LocalContext
+import androidx.core.view.ViewCompat
+
+
 @Composable
 fun HomeScreen(navController: NavController) {
     val products = remember { mutableStateOf<List<Product>?>(null) }
     val repository = ProductRepository()
+
+    // Set the status bar color
+    val view = LocalView.current
+    val context = LocalContext.current
+
+    SideEffect {
+        // Ensure the activity's window insets support edge-to-edge
+        (context as? ComponentActivity)?.let { activity ->
+            WindowCompat.setDecorFitsSystemWindows(activity.window, false)
+            val insetsController = ViewCompat.getWindowInsetsController(view)
+            insetsController?.isAppearanceLightStatusBars = true // Enable dark icons
+            activity.window.statusBarColor = Color.Transparent.toArgb() // Transparent status bar
+        }
+    }
 
     // Fetch products when the composable is launched
     LaunchedEffect(Unit) {
@@ -37,6 +63,7 @@ fun HomeScreen(navController: NavController) {
 
     Scaffold(
         topBar = { CustomTopBar(title = "Home") },
+
         floatingActionButton = {
             // FloatingActionButton for navigating to CartScreen
             FloatingActionButton(
@@ -50,6 +77,10 @@ fun HomeScreen(navController: NavController) {
             }
         },
         floatingActionButtonPosition = FabPosition.Center, // Ensures it is at the bottom center
+
+        modifier = Modifier
+            .fillMaxSize()
+            .windowInsetsPadding(WindowInsets.systemBars)
     )  { innerPadding ->
         if (products.value == null) {
             // Show loading indicator if products are not yet loaded

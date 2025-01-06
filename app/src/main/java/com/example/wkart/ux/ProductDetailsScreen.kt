@@ -40,7 +40,7 @@ fun ProductDetailsScreen(navController: NavController, productId: Int) {
     product.value?.let { currentProduct ->
         // Display product details
 
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.fillMaxSize().padding(16.dp).systemBarsPadding()) {
             Image(
                 painter = rememberAsyncImagePainter(currentProduct.image),
                 contentDescription = null,
