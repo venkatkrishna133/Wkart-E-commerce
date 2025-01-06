@@ -41,25 +41,33 @@ A fully-featured **e-commerce mobile application** built with **Kotlin**, offeri
    ```bash
    git clone https://github.com/your-username/ECommerceApp-Kotlin.git
    cd ECommerceApp-Kotlin
-2. Open in Android Studio:
-
-    *Open Android Studio and select "Open an Existing Project."
-    *Navigate to the project folder and open it.
-3.Set Up Dependencies:
-    *Ensure all required dependencies are installed. Use Gradle sync.
-4.Run the App:
-    *Connect your device or use an emulator.
-    *Click the "Run" button in Android Studio.
+- 2.Open in Android Studio:
+     - Open Android Studio and select "Open an Existing Project."
+     - Navigate to the project folder and open it.
+- 3.Set Up Dependencies:
+     - Ensure all required dependencies are installed. Use Gradle sync.
+- 4.Run the App:
+     - Connect your device or use an emulator.
+     - Click the "Run" button in Android Studio.
 
 ---
 
 **👤 About the Author**:
 
-Name: Venkatraman.
-GitHub: venkatkrishna133.
-Email: developingccode@gmail.com.
+- Name: Venkatraman.
+- GitHub: venkatkrishna133.
+- Email: developingccode@gmail.com.
 
 ---
 
 **📄 License**:
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+
+### Key Notes:
+- Replace `your-username` with your GitHub username.
+- Ensure the link in "GitHub: [bj]" points to your correct GitHub profile URL.
+- If you have a `LICENSE` file, ensure it is added to the repository root.
+
+
+
