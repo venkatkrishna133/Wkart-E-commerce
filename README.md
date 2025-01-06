@@ -52,11 +52,11 @@ Run the App:
 
 Connect your device or use an emulator.
 Click the "Run" button in Android Studio.
-
-👤 About the Author
+---
+**👤 About the Author**
 Name: Venkatraman
 GitHub: venkatkrishna133
 Email: developingccode@gmail.com
-
-📄 License
+---
+**📄 License**
 This project is licensed under the MIT License. See the LICENSE file for details.
