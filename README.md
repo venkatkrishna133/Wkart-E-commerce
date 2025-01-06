@@ -30,7 +30,7 @@ A fully-featured **e-commerce mobile application** built with **Kotlin**, offeri
 
 | **Paymentpage** | **SampleToast** | 
 |--------------|----------------------|
-| ![Paymentpage](screenshots/PaymentPage.jpg) | ![SampleToast](screenshots/sample Toast.jpg) | 
+| ![Paymentpage](screenshots/PaymentPage.jpg) | ![SampleToast](screenshots/SampleToast.jpg) | 
 
 ---
 
