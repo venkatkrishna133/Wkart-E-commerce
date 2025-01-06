@@ -61,13 +61,7 @@ A fully-featured **e-commerce mobile application** built with **Kotlin**, offeri
 ---
 
 **📄 License**:
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-
-### Key Notes:
-- Replace `your-username` with your GitHub username.
-- Ensure the link in "GitHub: [bj]" points to your correct GitHub profile URL.
-- If you have a `LICENSE` file, ensure it is added to the repository root.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 
 
