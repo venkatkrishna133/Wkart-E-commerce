@@ -1,0 +1,99 @@
+Index: app/src/main/java/com/example/wkart/ux/UPISelectionScreen.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/wkart/ux/UPISelectionScreen.kt b/app/src/main/java/com/example/wkart/ux/UPISelectionScreen.kt
+--- a/app/src/main/java/com/example/wkart/ux/UPISelectionScreen.kt	
++++ b/app/src/main/java/com/example/wkart/ux/UPISelectionScreen.kt	(date 1735359071396)
+@@ -36,17 +36,17 @@
+ 
+         // GPay Button
+         UPIButton("Google Pay") {
+-            shareUPIPaymentRequest(context)
++            navigateToUPI("com.google.android.apps.nbu.paisa.user", context)
+         }
+ 
+         // Paytm Button
+         UPIButton("Paytm") {
+-            shareUPIPaymentRequest(context)
++            navigateToUPI("net.one97.paytm", context)
+         }
+ 
+         // PhonePe Button
+         UPIButton("PhonePe") {
+-            shareUPIPaymentRequest(context)
++            navigateToUPIForPhonePe(context) // Modified for PhonePe
+         }
+     }
+ }
+@@ -62,23 +62,55 @@
+     }
+ }
+ 
+-fun shareUPIPaymentRequest(context: Context) {
++fun navigateToUPI(packageName: String, context: Context) {
+     try {
+-        // Build UPI URI for payment
+         val uri = Uri.parse("upi://pay?pa=someone@upi&pn=UPI&mc=0000&tid=1234567890&url=https://www.example.com")
+-
+-        // Create intent to share the UPI URI
+-        val intent = Intent(Intent.ACTION_SEND)
+-        intent.type = "text/plain"
+-        intent.putExtra(Intent.EXTRA_TEXT, uri.toString())  // Add UPI URI as extra data
++        val intent = Intent(Intent.ACTION_VIEW, uri)
++        intent.setPackage(packageName)
+ 
+-        // Create an Intent Chooser to allow the user to pick their UPI app
+-        val chooser = Intent.createChooser(intent, "Select UPI App")
+-
+-        // Start the chooser activity
+-        context.startActivity(chooser)
++        // Check if the UPI app is installed
++        if (isPackageInstalled(packageName, context)) {
++            context.startActivity(intent)
++        } else {
++            // If the app is not installed, show a message to the user
++            Toast.makeText(context, "$packageName not installed", Toast.LENGTH_SHORT).show()
++        }
+     } catch (e: Exception) {
+         e.printStackTrace()
+-        Toast.makeText(context, "Error initiating payment", Toast.LENGTH_SHORT).show()
++        // Handle any other exceptions that might occur
++    }
++}
++
++// New function to handle PhonePe using a generic UPI intent
++fun navigateToUPIForPhonePe(context: Context) {
++    try {
++        val uri = Uri.parse("upi://pay?pa=someone@upi&pn=PhonePe&mc=0000&tid=1234567890&url=https://www.example.com")
++        val intent = Intent(Intent.ACTION_VIEW, uri)
++
++        // Try to set the package name for PhonePe
++        intent.setPackage("com.phonepe.app")
++
++        // Check if PhonePe is installed
++        if (isPackageInstalled("com.phonepe.app", context)) {
++            context.startActivity(intent)
++        } else {
++            // If PhonePe is not installed, show a message
++            Toast.makeText(context, "PhonePe not installed", Toast.LENGTH_SHORT).show()
++        }
++    } catch (e: Exception) {
++        e.printStackTrace()
++        // Handle any other exceptions that might occur
+     }
+ }
++
++fun isPackageInstalled(packageName: String, context: Context): Boolean {
++    val pm = context.packageManager
++    try {
++        pm.getPackageInfo(packageName, 0)
++        Toast.makeText(context, "$packageName is installed", Toast.LENGTH_SHORT).show()
++        return true
++    } catch (e: Exception) {
++        Toast.makeText(context, "$packageName not installed", Toast.LENGTH_SHORT).show()
++        return false
++    }
++}
+\ No newline at end of file
