@@ -28,7 +28,7 @@ A fully-featured **e-commerce mobile application** built with **Kotlin**, offeri
 |--------------|----------------------|-------------------|
 | ![Homepage](screenshots/HomePage.jpg) | ![Product Details](screenshots/ProductDetialPage.jpg) | ![Cart](screenshots/CartPage.jpg) |
 
-| **Paymentpage** | **SampleToast** | 
+| **PaymentPage** | **SampleToast** | 
 |--------------|----------------------|
 | ![Paymentpage](screenshots/PaymentPage.jpg) | ![SampleToast](screenshots/SampleToast.jpg) | 
 
