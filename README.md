@@ -31,7 +31,7 @@ A fully-featured **e-commerce mobile application** built with **Kotlin**, offeri
 
 | **Homepage** | **Product Details** | **Shopping Cart** |
 |--------------|----------------------|-------------------|
-| ![Homepage](screenshots/HomePage.jpeg) | ![Product Details](screenshots/ProductDetialPage.jpeg) | ![Cart](screenshots/CartPage.jpeg) |
+| ![Homepage](screenshots/HomePage.jpg) | ![Product Details](screenshots/ProductDetialPage.jpg) | ![Cart](screenshots/CartPage.jpg) |
 
 ---
 
