@@ -7,12 +7,8 @@ A fully-featured **e-commerce mobile application** built with **Kotlin**, offeri
 ## 🌟 Features
 
 - **Product Catalog:** Browse products with detailed descriptions and high-quality images.
-- **Search and Filter:** Easily find what you’re looking for using advanced search and filters.
 - **Shopping Cart:** Add, remove, and manage items in the cart.
 - **Secure Payments:** Checkout with secure payment gateways.
-- **Order Tracking:** Keep track of your orders with real-time updates.
-- **User Accounts:** Register, log in, and manage your profile.
-- **Wishlist:** Save favorite products for later.
 
 ---
 
@@ -20,7 +16,6 @@ A fully-featured **e-commerce mobile application** built with **Kotlin**, offeri
 
 - **Kotlin**: The primary programming language.
 - **Android Jetpack Components**: Used for modern and efficient app architecture.
-- **Firebase/Backend Service**: For user authentication and database management.
 - **Payment Gateway API**: To enable secure transactions.
 - **Glide**: For efficient image loading.
 - **MVVM Architecture**: Ensuring separation of concerns and easier scalability.
@@ -32,6 +27,10 @@ A fully-featured **e-commerce mobile application** built with **Kotlin**, offeri
 | **Homepage** | **Product Details** | **Shopping Cart** |
 |--------------|----------------------|-------------------|
 | ![Homepage](screenshots/HomePage.jpg) | ![Product Details](screenshots/ProductDetialPage.jpg) | ![Cart](screenshots/CartPage.jpg) |
+
+| **Paymentpage** | **SampleToast** | 
+|--------------|----------------------|
+| ![Paymentpage](screenshots/PaymentPage.jpg) | ![SampleToast](screenshots/sample Toast.jpg) | 
 
 ---
 
