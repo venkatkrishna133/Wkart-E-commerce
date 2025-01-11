@@ -67,7 +67,7 @@ fun CartItem(product: Product, onRemove: () -> Unit, onBuyNow: () -> Unit, navCo
                     overflow = TextOverflow.Ellipsis
                 )
                 Text(
-                    text = "$${totalPrice.value}",
+                    text = "₹${totalPrice.value}",
                     style = MaterialTheme.typography.h6,
                     color = Color.Gray,
                     modifier = Modifier.padding(top = 8.dp)

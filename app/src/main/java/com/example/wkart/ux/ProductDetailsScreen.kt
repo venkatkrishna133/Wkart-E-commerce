@@ -53,7 +53,7 @@ fun ProductDetailsScreen(navController: NavController, productId: Int) {
 
             Text(text = currentProduct.title, style = MaterialTheme.typography.h5, modifier = Modifier.padding(bottom = 8.dp))
             Text(text = currentProduct.description, style = MaterialTheme.typography.body2, maxLines = 3, overflow = TextOverflow.Ellipsis)
-            Text(text = "$${currentProduct.price}", style = MaterialTheme.typography.h6, color = Color.Gray, modifier = Modifier.padding(vertical = 8.dp))
+            Text(text = "₹${currentProduct.price}", style = MaterialTheme.typography.h6, color = Color.Gray, modifier = Modifier.padding(vertical = 8.dp))
 
             // "Add to Cart" Button
             Button(

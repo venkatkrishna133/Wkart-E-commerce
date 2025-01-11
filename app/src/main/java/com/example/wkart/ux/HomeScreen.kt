@@ -122,7 +122,7 @@ fun ProductCard(product: Product, onClick: () -> Unit) {
                 .clip(RoundedCornerShape(4.dp)),)
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(text = product.title, style = MaterialTheme.typography.titleMedium)
-                Text(text = "$${product.price}", style = MaterialTheme.typography.bodyMedium, color = Color.Gray)
+                Text(text = "₹${product.price}", style = MaterialTheme.typography.bodyMedium, color = Color.Gray)
 
         }
     }
