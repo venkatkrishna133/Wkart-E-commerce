@@ -28,7 +28,7 @@ A fully-featured **e-commerce mobile application** built with **Kotlin**, offeri
 |--------------|----------------------|-------------------|
 | ![Homepage](screenshots/HomePage.jpg) | ![Product Details](screenshots/ProductDetialPage.jpg) | ![Cart](screenshots/CartPage.jpg) |
 
-| **Paymentpage** | **SampleToast** | 
+| **PaymentPage** | **SampleToast** | 
 |--------------|----------------------|
 | ![Paymentpage](screenshots/PaymentPage.jpg) | ![SampleToast](screenshots/SampleToast.jpg) | 
 
@@ -38,7 +38,7 @@ A fully-featured **e-commerce mobile application** built with **Kotlin**, offeri
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/ECommerceApp-Kotlin.git
+   git clone https://github.com/venkatkrishna133/ECommerceApp-Kotlin.git
    cd ECommerceApp-Kotlin
 2. Open in Android Studio:
      - Open Android Studio and select "Open an Existing Project."
